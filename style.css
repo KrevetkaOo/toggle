@@ -1,69 +1,75 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-	background-color: #222;
-	margin: 30px auto;
-	width: 300px;
-	border: 1px solid #323232;
-	border-radius: 4px;
-	padding: 40px;
+    background-color: #222;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+    margin: 30px auto;
+    width: 300px;
+    border: 1px solid #323232;
+    border-radius: 4px;
+    padding: 40px;
 }
 /* style */
 .toggler {
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
-	user-select: none;
-	color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    user-select: none;
+    color: #fff;
 }
 .toggler .toggler__title {
-	width: 100px;
+    width: 100px;
 }
 .toggler .toggler__input {
-	display: none;
+    display: none;
 }
 .toggler .toggler__label {
-	position: relative;
-	display: flex;
-	align-items: center;
-	cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 .toggler .toggler__label:before {
-	content: '';
-	width: 60px;
-	height: 30px;
-	background-color: #222;
-	border-radius: 35px;
-	border: #323232 1px solid;
-	transition: background-color 0.25s ease-in-out;
+    content: "";
+    width: 60px;
+    height: 30px;
+    background-color: #222;
+    border-radius: 35px;
+    border: #323232 1px solid;
+    transition: background-color 0.25s ease-in-out;
 }
 .toggler .toggler__label:after {
-	content: '';
-	width: 26px;
-	height: 26px;
-	position: absolute;
-	border-radius: 50%;
-	border: #323232 1px solid;
-	background-color: #4e4e4e;
-	transform: translateX(2px);
-	transition: all 0.25s ease-in-out;
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    border-radius: 50%;
+    border: #323232 1px solid;
+    background-color: #4e4e4e;
+    transform: translateX(2px);
+    transition: all 0.25s ease-in-out;
 }
 .toggler .toggler__input:checked + .toggler__label:after {
-	background-color: #fff;
-	transform: translateX(32px);
-	border-color: #fbb82b;
+    background-color: #fff;
+    transform: translateX(32px);
+    border-color: #fbb82b;
 }
 .toggler .toggler__input:checked + .toggler__label:before {
-	background-color: #ffdb4d;
-	border-color: #fbb82b;
+    background-color: #ffdb4d;
+    border-color: #fbb82b;
 }
 .toggler .toggler__input ~ .toggler__text:after {
-	content: 'Выкл';
-	margin-left: 10px;
-	transition: all 0.25s ease-in-out;
-	color: #fff;
+    content: "Выкл";
+    margin-left: 10px;
+    transition: all 0.25s ease-in-out;
+    color: #fff;
 }
 .toggler .toggler__input:checked ~ .toggler__text:after {
-	content: 'Вкл';
+    content: "Вкл";
 }
